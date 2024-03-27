@@ -51,9 +51,9 @@ public class Hotel {
                 //rooms[i].availability = false;
                 return "Room Reservation Successful!" +
                         "\nGuest Name: " + guest.getFirstName() + " " + guest.getLastName() + " "
-                        + "\nGuest Email: " + guest.getEmail()  +"\nRoom Type: " + roomType + "\nRoom number: "
+                        + "\nGuest Email: " + guest.getEmail()  +"\nRoom Type: " + roomType + "\nLocker number: "
                         + rooms[i].getRoomNumber() + "\nCheck-in: " + checkIn + "\nCheck-out: " + checkOut + bill
-                        + "\nDon't forget your room number if you want to cancel your reservation!";
+                        + "\nDon't forget your Locker number if you want to cancel your reservation!";
             }
         }
         return null;

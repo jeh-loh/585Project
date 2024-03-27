@@ -74,7 +74,7 @@ public class GUI {
         Room r7 = new Room(7 ,"Single" , true);
         Room r8 = new Room(8 ,"Double" , true);
         Room r9 = new Room(9 ,"Triple" , true);
-        Room r10 = new Room(10 ,"Suite" , true);
+        Room r10 = new Room(10 ,"Four Tier" , true);
         
         /**
          * Aggregate all initialized rooms into an array to represent them collectively.
@@ -945,7 +945,7 @@ public class GUI {
         customerPanel.setLayout(new FlowLayout());
         JTable roomAv2JTable = new JTable();
         JPanel buttonPanel4 = new JPanel(new FlowLayout(FlowLayout.LEFT));
-        JTextField firstName, lastName, email, numAdults, numChildren;
+        JTextField firstName, lastName, email;
         JDateChooser checkInDate, checkOutDate;
         JComboBox<String> roomType;
         JTextArea message;
@@ -960,20 +960,20 @@ public class GUI {
         lastName.setColumns(20);
         customerPanel.add(lastName);
 
-        customerPanel.add(new JLabel("Email: "));
+        customerPanel.add(new JLabel("List of Items: "));
         email = new JTextField();
         email.setColumns(25);
         customerPanel.add(email);
 
-        customerPanel.add(new JLabel("Number of Adults: "));
-        numAdults = new JTextField();
-        numAdults.setColumns(7);
-        customerPanel.add(numAdults);
+        //customerPanel.add(new JLabel("Number of Adults: "));
+        //numAdults = new JTextField();
+        //numAdults.setColumns(7);
+        //customerPanel.add(numAdults);
 
-        customerPanel.add(new JLabel("Number of Children: "));
-        numChildren = new JTextField();
-        numChildren.setColumns(7);
-        customerPanel.add(numChildren);
+       // customerPanel.add(new JLabel("Number of Children: "));
+        ///numChildren = new JTextField();
+        //numChildren.setColumns(7);
+        //customerPanel.add(numChildren);
 
         customerPanel.add(new JLabel("Check-In Date: "));
         checkInDate = new JDateChooser();
@@ -989,7 +989,7 @@ public class GUI {
         customerPanel.add(checkOutDate);
 
         customerPanel.add(new JLabel("Room Type: "));
-        roomType = new JComboBox<>(new String[]{"Single", "Double", "Triple", "Suite"});
+        roomType = new JComboBox<>(new String[]{"Single", "Double", "Triple", "Four Tier"});
         customerPanel.add(roomType);
 
         customerPanel.add(new JLabel("Message: "));
@@ -1040,7 +1040,7 @@ public class GUI {
             // Check if all necessary fields are filled out by user
             // Validate that all required fields are filled out by user
             if (firstName.getText().isEmpty() || lastName.getText().isEmpty() || email.getText().isEmpty()
-                    || numAdults.getText().isEmpty() || numChildren.getText().isEmpty()
+                    
                     || checkInDate.getDate() == null || checkOutDate.getDate() == null
                     || roomType.getSelectedItem().toString().isEmpty()){
                 // If not, show a message dialog prompting the user to fill all fields
@@ -1050,8 +1050,8 @@ public class GUI {
                 firstName.setText("");
                 lastName.setText("");
                 email.setText("");
-                numAdults.setText("");
-                numChildren.setText("");
+               // numAdults.setText("");
+                //numChildren.setText("");
                 checkInDate.setDate(null);
                 checkOutDate.setDate(null);
                 roomType.setSelectedIndex(-1);
@@ -1064,8 +1064,8 @@ public class GUI {
                 roomType1String = roomType.getSelectedItem().toString();
                 checkOut1String = checkOut;
                 checkIn1String = checkIn;
-                children = numChildren.getText();
-                adults = numAdults.getText();
+                //children = numChildren.getText();
+                //adults = numAdults.getText();
                 email1String = email.getText();
                 firstName1String = firstName.getText();
                 lastName1String = lastName.getText();
@@ -1119,8 +1119,8 @@ public class GUI {
                 firstName.setText("");
                 lastName.setText("");
                 email.setText("");
-                numAdults.setText("");
-                numChildren.setText("");
+                //numAdults.setText("");
+                //numChildren.setText("");
                 checkInDate.setDate(null);
                 checkOutDate.setDate(null);
                 roomType.setSelectedIndex(-1);
