@@ -105,7 +105,7 @@ public class GUI {
         JPanel homePanel = new JPanel(new BorderLayout());
         JPanel bookingPanel = new JPanel(new BorderLayout());
         JPanel roomsPanel = new JPanel(new BorderLayout());
-        JPanel amenitiesPanel = new JPanel(new BorderLayout());
+       // JPanel amenitiesPanel = new JPanel(new BorderLayout());
         JPanel logoAndButtonPanel = new JPanel(new BorderLayout());
         JPanel P1Panel = new JPanel(new BorderLayout());
         JPanel P3Panel = new JPanel(new BorderLayout());
@@ -131,8 +131,8 @@ public class GUI {
          */
         // Create buttons
         JButton homeButton = buttonStyling("Home", Color.GREEN);
-        JButton roomsButton = buttonStyling("Rooms", Color.GREEN);
-        JButton amenitiesButton = buttonStyling("Amenities", Color.GREEN);
+        JButton roomsButton = buttonStyling("Lockers", Color.GREEN);
+       // JButton amenitiesButton = buttonStyling("Amenities", Color.GREEN);
         JButton bookingButton = buttonStyling("Book Now", Color.RED);
         JButton cancelReservationButton = buttonStyling("Cancel Reservation",Color.MAGENTA);
         JButton adminButton = buttonStyling("Admin",Color.ORANGE);
@@ -142,7 +142,7 @@ public class GUI {
          */
         // scrollable panels
         JScrollPane homeScrollPane = new JScrollPane(homePanel);
-        JScrollPane amenitiesScrollPane = new JScrollPane(amenitiesPanel);
+       // JScrollPane amenitiesScrollPane = new JScrollPane(amenitiesPanel);
         JScrollPane RoomsScrollPane = new JScrollPane(roomsPanel); 
         JScrollPane BookingScrollPane = new JScrollPane(bookingPanel);
 
@@ -152,7 +152,7 @@ public class GUI {
         // Add buttons to button panel
         buttonPanel.add(homeButton);
         buttonPanel.add(roomsButton);
-        buttonPanel.add(amenitiesButton);
+       // buttonPanel.add(amenitiesButton);
         buttonPanel.add (cancelReservationButton);
         buttonPanel.add(adminButton);
         
@@ -161,7 +161,7 @@ public class GUI {
          */
 
         // Load the hotel image and create a JLabel for the image
-        ImageIcon imageIcon = new ImageIcon("src/Hotel_Toad/images/hotel.png");
+        ImageIcon imageIcon = new ImageIcon("src/Hotel_Toad/images/lockers.png");
         JLabel imageLabel = new JLabel(imageIcon);
        
         /**
@@ -289,7 +289,7 @@ public class GUI {
          * Logo label with predefined image and border styling.
          */
         //add logo
-        ImageIcon logo = new ImageIcon("src/Hotel_Toad/images/logo.png");
+        ImageIcon logo = new ImageIcon("src/Hotel_Toad/images/logo3.png");
         JLabel logoLabel = new JLabel(logo);
         Border border = BorderFactory.createLineBorder(Color.BLACK, 3);
         logoLabel.setBorder(border);
@@ -320,16 +320,16 @@ public class GUI {
          * Loading images for different room types.
          */
         // Load images
-        ImageIcon P1 = new ImageIcon("src/Hotel_Toad/images/single.png");
-        ImageIcon P2 = new ImageIcon("src/Hotel_Toad/images/double.png");
-        ImageIcon P3 = new ImageIcon("src/Hotel_Toad/images/triple.png");
-        ImageIcon P4 = new ImageIcon("src/Hotel_Toad/images/suite.png");
+        ImageIcon P1 = new ImageIcon("src/Hotel_Toad/images/singleLocker.png");
+        ImageIcon P2 = new ImageIcon("src/Hotel_Toad/images/doubleLocker.png");
+        ImageIcon P3 = new ImageIcon("src/Hotel_Toad/images/tripleLocker2.png");
+        ImageIcon P4 = new ImageIcon("src/Hotel_Toad/images/fourLocker2.png");
 
        /**
          * Label for "Single Queen" title and its styling.
          */
         // label for title/ title styling
-        JLabel P1LabelT = new JLabel("Single Queen");
+        JLabel P1LabelT = new JLabel("Single Tier Locker");
         Font  f3  = new Font(Font.DIALOG, Font.ROMAN_BASELINE, 32);
         P1LabelT.setFont(f3);
         P1LabelT.setForeground(Color.GRAY);
@@ -350,7 +350,7 @@ public class GUI {
         /**
          * Label for "Classic Double" title and its styling.
          */
-        JLabel P2LabelT = new JLabel("Classic Double");
+        JLabel P2LabelT = new JLabel(" Double Tier Locker");
         P2LabelT.setFont(f3);
         P2LabelT.setForeground(Color.GRAY);
         P2LabelT.setBounds(444,1212,511,111);
@@ -370,7 +370,7 @@ public class GUI {
         /**
          * Label for "Classic Triple" title and its styling.
          */
-        JLabel P3LabelT = new JLabel("Classic Triple");
+        JLabel P3LabelT = new JLabel("Triple Tier Locke");
         P3LabelT.setFont(f3);
         P3LabelT.setForeground(Color.GRAY);
         P3LabelT.setBounds(1114,242,511,111);
@@ -391,7 +391,7 @@ public class GUI {
         /**
          * Label for "Classic Suite" title and its styling.
          */
-        JLabel P4LabelT = new JLabel("Classic Suite");
+        JLabel P4LabelT = new JLabel("Four Tier Locker");
         P4LabelT.setFont(f3);
         P4LabelT.setForeground(Color.GRAY);
         P4LabelT.setBounds(544,1122,511,111);
@@ -671,7 +671,7 @@ public class GUI {
          * On clicking the amenitiesButton, the view is switched to show the amenities tab.
          * Additionally, styling adjustments are made to the booking button and logoAndButtonPanel is added to the amenitiesPanel.
          */
-        amenitiesButton.addActionListener(new ActionListener() {
+        /*  amenitiesButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 CardLayout cardLayout = (CardLayout) mainPanel.getLayout();
           
@@ -684,8 +684,7 @@ public class GUI {
                 cardLayout.show(mainPanel, "Amenities");
 
             }
-        });
-
+        });*/
         /**
          * Action listener for roomsButton.
          * On clicking the roomsButton, the view is switched to show the rooms panel.
