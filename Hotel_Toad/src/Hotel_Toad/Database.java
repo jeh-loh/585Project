@@ -74,7 +74,7 @@ public class Database {
         String username = "admin"; // MySQL credentials
         String password = "01NoShotFlip$";
          String query
-            = "insert into Customer_Details(RoomNum,First_Name,Last_Name,Email) "+"values (?, ?, ?, ?)"; // query to be run
+            = "insert into Customer_Details(lockerNum,First_Name,Last_Name,List_Iteams) "+"values (?, ?, ?, ?)"; // query to be run
         Class.forName(
             "com.mysql.cj.jdbc.Driver"); // Driver name
         Connection con = DriverManager.getConnection(
@@ -109,7 +109,7 @@ public class Database {
         String username = "admin"; // MySQL credentials
         String password = "01NoShotFlip$";
         String query
-            = "DELETE FROM Customer_Details WHERE RoomNum = ?"; // query to be run
+            = "DELETE FROM Customer_Details WHERE lockerNum = ?"; // query to be run
         Class.forName(
             "com.mysql.cj.jdbc.Driver"); // Driver name
         Connection con = DriverManager.getConnection(
@@ -275,7 +275,7 @@ public class Database {
         String username = "admin"; // MySQL credentials
         String password = "01NoShotFlip$";
          String query
-            = "insert into Booking(RoomNum,Start_Date,End_Date) "+"values (?, ?, ? )"; // query to be run
+            = "insert into Booking(lockerNum,Start_Date,End_Date) "+"values (?, ?, ? )"; // query to be run
 
          Class.forName(
             "com.mysql.cj.jdbc.Driver"); // Driver name
@@ -303,7 +303,7 @@ public class Database {
         String username = "admin"; // MySQL credentials
         String password = "01NoShotFlip$";
         String query
-            = "DELETE FROM Booking WHERE RoomNum = ?"; // query to be run
+            = "DELETE FROM Booking WHERE lockerNum = ?"; // query to be run
         Class.forName(
             "com.mysql.cj.jdbc.Driver"); // Driver name
         Connection con = DriverManager.getConnection(
