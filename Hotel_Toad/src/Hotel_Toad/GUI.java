@@ -133,8 +133,8 @@ public class GUI {
         JButton homeButton = buttonStyling("Home", Color.GREEN);
         JButton roomsButton = buttonStyling("Lockers", Color.GREEN);
        // JButton amenitiesButton = buttonStyling("Amenities", Color.GREEN);
-        JButton bookingButton = buttonStyling("Book Now", Color.RED);
-        JButton cancelReservationButton = buttonStyling("Cancel Reservation",Color.MAGENTA);
+        JButton bookingButton = buttonStyling("Store Now", Color.RED);
+        JButton cancelReservationButton = buttonStyling("Cancel Storage / Emptied",Color.MAGENTA);
         JButton adminButton = buttonStyling("Admin",Color.ORANGE);
 
         /**
@@ -943,7 +943,7 @@ public class GUI {
         customerViewFrame.setSize(1500, 1000);
 
         JPanel customerPanel = new JPanel();
-        JButton bookNow = new JButton("Book Now");
+        JButton bookNow = new JButton("Store Now");
         JButton goBack3 = new JButton("Go Back");
         customerPanel.setLayout(new FlowLayout());
         JTable roomAv2JTable = new JTable();
@@ -1172,7 +1172,7 @@ public class GUI {
             // Code to handle admin actions
             public void actionPerformed(ActionEvent e){
                 // Prompt user for room number
-              String roomNum = JOptionPane.showInputDialog(frame,"Enter You're Room Number Please"); 
+              String roomNum = JOptionPane.showInputDialog(frame,"Enter You're Locker Number Please"); 
 
               // Validate the entered room number
               if (roomNum != null && !roomNum.trim().isEmpty()) { 
@@ -1180,10 +1180,10 @@ public class GUI {
                 try {
                     roomNumber = Integer.parseInt(roomNum);
                 } catch (NumberFormatException e1) {
-                    JOptionPane.showMessageDialog(frame, "Invalid Room Number. Please enter a valid number.");
+                    JOptionPane.showMessageDialog(frame, "Invalid Locker Number. Please enter a valid number.");
                 }
             } else {
-                JOptionPane.showMessageDialog(frame, "Please Enter A Room Number");
+                JOptionPane.showMessageDialog(frame, "Please Enter A Locker Number");
             }
              // Attempt to cancel room reservation using the room number and display the outcome to the user
               try {
