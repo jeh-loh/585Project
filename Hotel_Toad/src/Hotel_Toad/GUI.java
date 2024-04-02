@@ -195,7 +195,7 @@ public class GUI {
          * Copyright label with predefined text and styling.
          */
         //footer labels/styling
-        JLabel t = new JLabel("<html>Copyright \u00A9 2023 Hotel Toad. <br>\r\n" + //
+        JLabel t = new JLabel("<html>Copyright \u00A9 2023 Storage Lockers. <br>\r\n" + //
                 "All rights reserved. All trademarks, service marks, trade names, trade dress, product names and logos appearing on the site are the property of their respective owners\r\n" + //
                         "\r\n");
         Font  tt  = new Font(Font.DIALOG, Font.ROMAN_BASELINE, 12);
@@ -215,9 +215,9 @@ public class GUI {
         /**
          * Description label detailing the charm and allure of Hotel Toad.
          */
-        JLabel t2 = new JLabel("<html>Embracing the timeless charm of Hotel Toad<br>amidst the modern allure of current hospitality,\r\n" + //
-                "<br>Hotel Toad offers you a lasting escape from\r\n" + //
-                        "<br>the instant you step into your cherished retreat.\r\n" + //
+        JLabel t2 = new JLabel("<html>Embracing the timeless charm of a Storage Locker<br>amidst the modern allure of current hospitality,\r\n" + //
+                "<br>Storage Locker offers you the best Safety from\r\n" + //
+                        "<br>the instant you step into Our building .\r\n" + //
                                 "\r\n" + //
                                 " </html>");
         Font  ttt  = new Font(Font.DIALOG, Font.ROMAN_BASELINE, 14);
@@ -236,7 +236,7 @@ public class GUI {
         /**
          * Address label displaying the location of Hotel Toad.
          */
-        JLabel t4 = new JLabel("100 Universal City Plaza, Universal City, CA 91608");
+        JLabel t4 = new JLabel("100 Studio  City , Universal City, CA 91608");
         t4.setFont(ttt);
         t4.setForeground(Color.WHITE);
         t4.setBounds(824,1012,511,411);
@@ -257,7 +257,7 @@ public class GUI {
         /**
          * Label displaying the email and phone contact details of the hotel.
          */
-        JLabel t6 = new JLabel("<html> Email: universalstudios@gmail.com <br><br>Phone: 818-259-3329 </html>");
+        JLabel t6 = new JLabel("<html> Email: storageLockers@gmail.com <br><br>Phone: 818-555-5555 </html>");
         t6.setFont(ttt);
         t6.setForeground(Color.WHITE);
         t6.setBounds(1524,1042,511,411);
@@ -339,9 +339,9 @@ public class GUI {
          * Description label for "Single Queen" room type.
          */
         // label for text/ styling
-        JLabel P1LabelTT = new JLabel("<html> Step into the delightful world of Mario-themed rooms, and\r\n" + //
-                "experience<br> the comfort of air-conditioned spaces seamlessly\r\n" + //
-                "ensuring a truly enjoyable adventure</html>");
+       JLabel P1LabelTT = new JLabel("<html> Store you bigger Iteams from things like\r\n" + //
+                "SwonBoard<br>  ,musical instruments, luggage, toys, books, and small appliances. \r\n" + //
+                "ensuring your Iteams would be in safe Hands</html>");
         Font  f3T  = new Font(Font.DIALOG, Font.ROMAN_BASELINE, 22);
         P1LabelTT.setFont(f3T);
         P1LabelTT.setForeground(Color.BLACK);
@@ -358,10 +358,10 @@ public class GUI {
         /**
          * Description label for "Classic Double" room type.
          */
-        JLabel P3LabelTT = new JLabel("<html> Our Classic Double room is meticulously crafted as a haven of\r\n" + 
-                "tranquility and rejuvenation. Experience the enchanting blend\r\n" + //
+       JLabel P3LabelTT = new JLabel("<html> Our Classic Double Tier Locker were you could store thing like the following \r\n" + 
+                "Small Musical Instruments, Personal Belongings , Clothing , Sports Equipment and etc.\r\n" + //
                         "\r\n" + //
-                "of Mario's charm and<br> modern amenities in this retreat.\r\n" + //
+                "with our Gaurnted <br> Safety of your iteams.\r\n" + //
                       "</html>");
         P3LabelTT.setFont(f3T);
         P3LabelTT.setForeground(Color.BLACK);
@@ -378,11 +378,11 @@ public class GUI {
         /**
          * Description label for "Classic Triple" room type.
          */
-        JLabel P4LabelTT = new JLabel("<html> Step into the enchanting realm of our Mario-themed Triple Beds Room,\r\n" + //
+        JLabel P4LabelTT = new JLabel("<html> Store Medium Sized Iteams in our Triple tier Locker like the following Wallet,\r\n" + //
                 "\r\n" + //
-                "where the magic of Mario awaits you and your companions. Embrace\r\n" + //
+                "Keys , Phone , Small pounchs ,Notebooks, textbooks, and etc.\r\n" + //
                         "\r\n" + //
-                "the ultimate comfort and convenience.\r\n" + //
+                "guarnted to keep your iteams safe .\r\n" + //
                  "</html>");
         P4LabelTT.setFont(f3T);
         P4LabelTT.setForeground(Color.BLACK);
@@ -400,11 +400,15 @@ public class GUI {
         /**
          * Description label for "Classic Suite" room type.
          */
-        JLabel P5LabelTT = new JLabel("<html> Immerse yourself in an unparalleled experience of opulence\r\n" + //
+        JLabel P5LabelTT = new JLabel("<html> You Could also use our Four tier Locker which you could store the following\r\n" + //
                 "\r\n" + //
-                "as you step into this magnificent haven. Each detail of the suite is meticulously\r\n" + //
+                "Very Small Items (Keys and small personal electronics like earphones.\n" + //
+                        "Wallets or small purses.\n" + //
+                        "Sunglasses and other small accessories)\r\n" + //
                         "\r\n" + //
-                "crafted to exceed your highest expectations, providing the perfect setting. \r\n" + //
+                "Personal Items and Valuables (Mobile phones and chargers.\n" + //
+                        "Small notebooks, diaries, or planners.\n" + //
+                        "Jewelry or watches if a secure environment is guaranteed.) \r\n" + //
                         "\r\n" + //
                  "</html>");
         P5LabelTT.setFont(f3T);
@@ -805,7 +809,7 @@ public class GUI {
          * Buttons to view customer details, room availability, and booking details.
          */
         JButton checkCustomerDetails  = new JButton("Check Customer Details");
-        JButton roomAvailability  = new JButton("Rooms ");
+        JButton roomAvailability  = new JButton("Lockers ");
         JButton bookingDetails  = new JButton("Booking Details");
         JButton goBack2  = new JButton("Go Back");
         
