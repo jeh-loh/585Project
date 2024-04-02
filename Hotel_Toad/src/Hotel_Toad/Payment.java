@@ -40,13 +40,13 @@ public class Payment {
             roomPrice = 200.00;
         } else if (reservation.roomType.equalsIgnoreCase("Triple")){
             roomPrice = 420.00;
-        } else if (reservation.roomType.equalsIgnoreCase("Suite")){
+        } else if (reservation.roomType.equalsIgnoreCase("Four Tier")){
             roomPrice = 6900.00;
         }
 
         // Calculate nightly cost by considering both adults and children.
         // Note: Children are charged at half the adult rate.
-        double costPerNight = (reservation.numAdults * roomPrice) + (reservation.numChildren * (roomPrice/2));
+        double costPerNight = (roomPrice) + ( (roomPrice/2));
 
         // Parse check-in and check-out dates
         SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
@@ -61,7 +61,7 @@ public class Payment {
 
         // Calculate total bill
         bill = costPerNight * stayLength;
-        return "\nRoom Price: "+ fmt.format(bill);
+       return "\nLocker Price: "+ fmt.format(bill);
     }
 }
 

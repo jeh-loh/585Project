@@ -49,9 +49,9 @@ public class Hotel {
         for (int i = 0; i < rooms.length; i++){
             if (rooms[i].getRoomType().equalsIgnoreCase(roomType) && rooms[i].isAvailable()){
                 //rooms[i].availability = false;
-                return "Room Reservation Successful!" +
+                return "Locker Successfully Stored!" +
                         "\nGuest Name: " + guest.getFirstName() + " " + guest.getLastName() + " "
-                        + "\nGuest Email: " + guest.getEmail()  +"\nRoom Type: " + roomType + "\nLocker number: "
+                        + "\nGuest Email: " + guest.getEmail()  +"\nLocker Type: " + roomType + "\nLocker number: "
                         + rooms[i].getRoomNumber() + "\nCheck-in: " + checkIn + "\nCheck-out: " + checkOut + bill
                         + "\nDon't forget your Locker number if you want to cancel your reservation!";
             }
