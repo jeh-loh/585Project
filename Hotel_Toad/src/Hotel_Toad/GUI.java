@@ -12,9 +12,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * Represents a GUI interface for a hotel system.
- * Contains visual components and related actions for interacting with the hotel system.
- * @author Toad's Taskforce
+ * Represents a GUI interface for a Locker system.
+ * Contains visual components and related actions for interacting with the Locker system.
+ * 
  * @version 1.0
  * <p>
  * Date of Creation: 28 July 2023
@@ -38,7 +38,7 @@ public class GUI {
      /** The check-out date string. */
      public static String checkOut1String;
      
-     /** The type of the room reserved by the guest. */
+     /** The type of the locker reserved by the guest. */
      public static String roomType1String;
      
      /** Any additional message or notes associated with the reservation. */
@@ -50,12 +50,12 @@ public class GUI {
      /** The number of children for the reservation. */
      static String children;
      
-     /** The room number assigned for the reservation. */
+     /** The locker number assigned for the reservation. */
      public static int roomNumber;
       /**
-     * The main entry point for the hotel reservation system.
+     * The main entry point for the Locker system.
      * <p>
-     * Initializes the hotel rooms and their properties.
+     * Initializes the Lockers and their properties.
      * </p>
      *
      * @param args Command line arguments (not used in this implementation).
@@ -63,49 +63,49 @@ public class GUI {
     public static void main(String[] args) {
        
         /**
-         * Initialization of various rooms in the hotel.
+         * Initialization of various  Lockers.
          */
-        Room r1 = new Room(1 ,"Single" , true);
-        Room r2 = new Room(2 ,"Double" , true);
-        Room r3 = new Room(3 ,"Triple" , true);
-        Room r4 = new Room(4 ,"Single" , true);
-        Room r5 = new Room(5 ,"Double" , true);
-        Room r6 = new Room(6 ,"Triple" , true);
-        Room r7 = new Room(7 ,"Single" , true);
-        Room r8 = new Room(8 ,"Double" , true);
-        Room r9 = new Room(9 ,"Triple" , true);
-        Room r10 = new Room(10 ,"Four Tier" , true);
+        Locker r1 = new Locker(1 ,"Single" , true);
+        Locker r2 = new Locker(2 ,"Double" , true);
+        Locker r3 = new Locker(3 ,"Triple" , true);
+        Locker r4 = new Locker(4 ,"Single" , true);
+        Locker r5 = new Locker(5 ,"Double" , true);
+        Locker r6 = new Locker(6 ,"Triple" , true);
+        Locker r7 = new Locker(7 ,"Single" , true);
+        Locker r8 = new Locker(8 ,"Double" , true);
+        Locker r9 = new Locker(9 ,"Triple" , true);
+        Locker r10 = new Locker(10 ,"Four Tier" , true);
         
         /**
-         * Aggregate all initialized rooms into an array to represent them collectively.
+         * Aggregate all initialized lockers into an array to represent them collectively.
          */
-        // Create an array of rooms to add to a Hotel object
-        Room[] rooms = {r1, r2, r3, r4, r5, r6, r7, r8, r9, r10};
+        // Create an array of lockers to add to a Locker object
+        Locker[] lockers = {r1, r2, r3, r4, r5, r6, r7, r8, r9, r10};
         /**
-         * Create a hotel object, passing in the collection of initialized rooms.
+         * Create a MainLocker object, passing in the collection of initialized lockers.
          */
-        // Create Hotel element
-        Hotel H = new Hotel(rooms);
+        // Create MainLocker element
+        MainLocker H = new MainLocker(lockers);
     
         /**
-         * Main GUI frame for the hotel application.
+         * Main GUI frame for the Locker application.
          */
         // Create GUI frame
-        JFrame frame = new JFrame("Hotel Toad GUI");
+        JFrame frame = new JFrame("Locker GUI");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(1800, 1080);
 
         /**
-         * Initialize various panels for different sections and functionalities of the hotel GUI.
+         * Initialize various panels for different sections and functionalities of the Locker GUI.
          * For instance, these might represent different screens or sections within the application such 
-         * as home, booking, rooms view, etc.
+         * as home, booking, lockers view, etc.
          */
         // Create panels
         JPanel mainPanel = new JPanel(new CardLayout());
         JPanel homePanel = new JPanel(new BorderLayout());
         JPanel bookingPanel = new JPanel(new BorderLayout());
         JPanel roomsPanel = new JPanel(new BorderLayout());
-       // JPanel amenitiesPanel = new JPanel(new BorderLayout());
+        //JPanel amenitiesPanel = new JPanel(new BorderLayout());
         JPanel logoAndButtonPanel = new JPanel(new BorderLayout());
         JPanel P1Panel = new JPanel(new BorderLayout());
         JPanel P3Panel = new JPanel(new BorderLayout());
@@ -116,7 +116,7 @@ public class GUI {
 
 
         /**
-         * Initialization and setup of GUI components for the hotel application.
+         * Initialization and setup of GUI components for the Locker application.
          */
 
         // Nested button panel for housing top navigation buttons.
@@ -142,7 +142,7 @@ public class GUI {
          */
         // scrollable panels
         JScrollPane homeScrollPane = new JScrollPane(homePanel);
-       // JScrollPane amenitiesScrollPane = new JScrollPane(amenitiesPanel);
+        //JScrollPane amenitiesScrollPane = new JScrollPane(amenitiesPanel);
         JScrollPane RoomsScrollPane = new JScrollPane(roomsPanel); 
         JScrollPane BookingScrollPane = new JScrollPane(bookingPanel);
 
@@ -152,15 +152,15 @@ public class GUI {
         // Add buttons to button panel
         buttonPanel.add(homeButton);
         buttonPanel.add(roomsButton);
-       // buttonPanel.add(amenitiesButton);
+        //buttonPanel.add(amenitiesButton);
         buttonPanel.add (cancelReservationButton);
         buttonPanel.add(adminButton);
         
         /**
-         * Load an image representing the hotel and create a label to display it within the GUI.
+         * Load an image representing the lockers and create a label to display it within the GUI.
          */
 
-        // Load the hotel image and create a JLabel for the image
+        // Load the lockers image and create a JLabel for the image
         ImageIcon imageIcon = new ImageIcon("src/Hotel_Toad/images/lockers.png");
         JLabel imageLabel = new JLabel(imageIcon);
        
@@ -173,7 +173,7 @@ public class GUI {
         Color myColor2 = new Color(251, 241, 241); 
         
         /**
-         * GUI components related to the footer section of the hotel application.
+         * GUI components related to the footer section of the locker application.
          */
 
         /**
@@ -213,7 +213,7 @@ public class GUI {
         t1.setBounds(124,980,511,411);
 
         /**
-         * Description label detailing the charm and allure of Hotel Toad.
+         * Description label detailing the charm and allure of Locker System.
          */
         JLabel t2 = new JLabel("<html>Embracing the timeless charm of a Storage Locker<br>amidst the modern allure of current hospitality,\r\n" + //
                 "<br>Storage Locker offers you the best Safety from\r\n" + //
@@ -234,7 +234,7 @@ public class GUI {
         t3.setBounds(924,980,511,411);
 
         /**
-         * Address label displaying the location of Hotel Toad.
+         * Address label displaying the location of Sotrage Lockers.
          */
         JLabel t4 = new JLabel("100 Studio  City , Universal City, CA 91608");
         t4.setFont(ttt);
@@ -243,7 +243,7 @@ public class GUI {
 
        
         /**
-         * GUI components and styling related to the "Contact Us" section, logos, and room types of the hotel application.
+         * GUI components and styling related to the "Contact Us" section, logos, and locker types of the locker application.
          */
 
         /**
@@ -255,7 +255,7 @@ public class GUI {
         t5.setBounds(1574,980,511,411);
 
         /**
-         * Label displaying the email and phone contact details of the hotel.
+         * Label displaying the email and phone contact details of the Storgae locker.
          */
         JLabel t6 = new JLabel("<html> Email: storageLockers@gmail.com <br><br>Phone: 818-555-5555 </html>");
         t6.setFont(ttt);
@@ -314,10 +314,10 @@ public class GUI {
         EmptyBorder a = new EmptyBorder(0, 33, 0, 74);
         bookingButton.setBorder(a);
     
-        // Rooms panel start
+        // lockers panel start
         
        /**
-         * Loading images for different room types.
+         * Loading images for different locker types.
          */
         // Load images
         ImageIcon P1 = new ImageIcon("src/Hotel_Toad/images/singleLocker.png");
@@ -336,10 +336,10 @@ public class GUI {
         P1LabelT.setBounds(1244,312,511,111);
         
         /**
-         * Description label for "Single Queen" room type.
+         * Description label for "Single Tier Locker" locker type.
          */
         // label for text/ styling
-       JLabel P1LabelTT = new JLabel("<html> Store you bigger Iteams from things like\r\n" + //
+        JLabel P1LabelTT = new JLabel("<html> Store you bigger Iteams from things like\r\n" + //
                 "SwonBoard<br>  ,musical instruments, luggage, toys, books, and small appliances. \r\n" + //
                 "ensuring your Iteams would be in safe Hands</html>");
         Font  f3T  = new Font(Font.DIALOG, Font.ROMAN_BASELINE, 22);
@@ -356,9 +356,9 @@ public class GUI {
         P2LabelT.setBounds(444,1212,511,111);
 
         /**
-         * Description label for "Classic Double" room type.
+         * Description label for "Double Tier Locker" locker type.
          */
-       JLabel P3LabelTT = new JLabel("<html> Our Classic Double Tier Locker were you could store thing like the following \r\n" + 
+        JLabel P3LabelTT = new JLabel("<html> Our Classic Double Tier Locker were you could store thing like the following \r\n" + 
                 "Small Musical Instruments, Personal Belongings , Clothing , Sports Equipment and etc.\r\n" + //
                         "\r\n" + //
                 "with our Gaurnted <br> Safety of your iteams.\r\n" + //
@@ -370,13 +370,13 @@ public class GUI {
         /**
          * Label for "Classic Triple" title and its styling.
          */
-        JLabel P3LabelT = new JLabel("Triple Tier Locke");
+        JLabel P3LabelT = new JLabel("Triple Tier Locker");
         P3LabelT.setFont(f3);
         P3LabelT.setForeground(Color.GRAY);
         P3LabelT.setBounds(1114,242,511,111);
 
         /**
-         * Description label for "Classic Triple" room type.
+         * Description label for "Triple Tier Locker" locker type.
          */
         JLabel P4LabelTT = new JLabel("<html> Store Medium Sized Iteams in our Triple tier Locker like the following Wallet,\r\n" + //
                 "\r\n" + //
@@ -398,7 +398,7 @@ public class GUI {
 
        
         /**
-         * Description label for "Classic Suite" room type.
+         * Description label for "Four Tier Locker" locker type.
          */
         JLabel P5LabelTT = new JLabel("<html> You Could also use our Four tier Locker which you could store the following\r\n" + //
                 "\r\n" + //
@@ -416,7 +416,7 @@ public class GUI {
         P5LabelTT.setBounds(244,972,711,711);
 
         /**
-         * Image labels for room types.
+         * Image labels for locker types.
          */
         //img labels
         JLabel P1Label = new JLabel(P1);
@@ -426,7 +426,7 @@ public class GUI {
 
 
          /**
-         * Padding for room type images.
+         * Padding for locker type images.
          */
          // Adds padding through an empty border
         EmptyBorder paddingBorder = new EmptyBorder(122, 140, 0, 1244);   
@@ -470,13 +470,13 @@ public class GUI {
         P1Panel.add(P1Label);
         P3Panel.add(P3Label);
         /**
-         * Adds the nested panels P1Panel and P3Panel to the main panel called roomsPanel.
+         * Adds the nested panels P1Panel and P3Panel to the main panel called lockersPanel.
          */
         // add nested panels to main panel
         roomsPanel.add(P1Panel, BorderLayout.CENTER);
         roomsPanel.add(P3Panel, BorderLayout.SOUTH);
 
-         // Rooms panel end
+         // lockers panel end
 
 
     // amenities tab start
@@ -636,8 +636,8 @@ public class GUI {
          * Adds the P1aPanel and P3aPanel to the main amenities panel.
          */
         // add nested panels to main panel
-        amenitiesPanel.add(P1aPanel, BorderLayout.CENTER);
-        amenitiesPanel.add(P3aPanel, BorderLayout.SOUTH);
+       // amenitiesPanel.add(P1aPanel, BorderLayout.CENTER);
+       // amenitiesPanel.add(P3aPanel, BorderLayout.SOUTH);
 
         // This marks the end of configuration for the amenities tab
 
@@ -651,7 +651,7 @@ public class GUI {
         mainPanel.add(homeScrollPane, "Home");
         mainPanel.add(BookingScrollPane, "Booking");
         mainPanel.add(RoomsScrollPane, "Rooms"); 
-        mainPanel.add(amenitiesScrollPane, "Amenities");
+        //mainPanel.add(amenitiesScrollPane, "Amenities");
        
         /**
          * Adds the main panel to the main application frame.
@@ -675,7 +675,7 @@ public class GUI {
          * On clicking the amenitiesButton, the view is switched to show the amenities tab.
          * Additionally, styling adjustments are made to the booking button and logoAndButtonPanel is added to the amenitiesPanel.
          */
-        /*  amenitiesButton.addActionListener(new ActionListener() {
+       /*  amenitiesButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 CardLayout cardLayout = (CardLayout) mainPanel.getLayout();
           
@@ -689,10 +689,11 @@ public class GUI {
 
             }
         });*/
+
         /**
-         * Action listener for roomsButton.
-         * On clicking the roomsButton, the view is switched to show the rooms panel.
-         * Styling adjustments are also made to the booking button and logoAndButtonPanel is added to the roomsPanel.
+         * Action listener for lockersButton.
+         * On clicking the lockersButton, the view is switched to show the lockers panel.
+         * Styling adjustments are also made to the booking button and logoAndButtonPanel is added to the lockersPanel.
          */
         roomsButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -732,9 +733,9 @@ public class GUI {
         frame.setVisible(true);
     
         /**
-         * Creates an administrative frame for hotel management purposes.
+         * Creates an administrative frame for Locker management purposes.
          */
-        JFrame adminFrame = new JFrame("Hotel Toad GUI");
+        JFrame adminFrame = new JFrame("Locker GUI");
         adminFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         adminFrame.setSize(1280, 720);
 
@@ -798,7 +799,7 @@ public class GUI {
         /**
          * Create and initialize the adminView frame that displays various admin views.
          */
-        JFrame adminView = new JFrame("Hotel Toad GUI");
+        JFrame adminView = new JFrame("Locker GUI");
         JTable customerDetailsJTable = new JTable();
         JTable roomAvJTable = new JTable();
         JTable bookingJTable = new JTable();
@@ -806,11 +807,11 @@ public class GUI {
         adminView.setSize(1280, 720);
         JPanel adminViewer = new JPanel(new CardLayout());
         /**
-         * Buttons to view customer details, room availability, and booking details.
+         * Buttons to view customer details, locker availability, and booking details.
          */
         JButton checkCustomerDetails  = new JButton("Check Customer Details");
         JButton roomAvailability  = new JButton("Lockers ");
-        JButton bookingDetails  = new JButton("Booking Details");
+        JButton bookingDetails  = new JButton("Locker Details");
         JButton goBack2  = new JButton("Go Back");
         
         // Set up the admin viewer layout and add components
@@ -889,8 +890,8 @@ public class GUI {
         });
 
         /**
-         * Action listener for the roomAvailability button.
-         * On button click, retrieves room availability details from the database and sets the data to the roomAvJTable.
+         * Action listener for the lockerAvailability button.
+         * On button click, retrieves locker availability details from the database and sets the data to the lockerAvJTable.
          */
         roomAvailability.addActionListener(new ActionListener() {
         
@@ -938,7 +939,7 @@ public class GUI {
         /**
          * Initialize the customerViewFrame, set its properties, and add components for capturing customer booking details.
          */
-        JFrame customerViewFrame = new JFrame("Hotel Toad GUI");
+        JFrame customerViewFrame = new JFrame("Locker GUI");
         customerViewFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         customerViewFrame.setSize(1500, 1000);
 
@@ -968,13 +969,13 @@ public class GUI {
         email.setColumns(25);
         customerPanel.add(email);
 
-        //customerPanel.add(new JLabel("Number of Adults: "));
+       // customerPanel.add(new JLabel("Number of Adults: "));
         //numAdults = new JTextField();
         //numAdults.setColumns(7);
         //customerPanel.add(numAdults);
 
        // customerPanel.add(new JLabel("Number of Children: "));
-        ///numChildren = new JTextField();
+        //numChildren = new JTextField();
         //numChildren.setColumns(7);
         //customerPanel.add(numChildren);
 
@@ -1007,7 +1008,7 @@ public class GUI {
 
         /**
          * Action listener for the bookingButton.
-         * On button click, retrieves room availability details from the database and displays the customer booking form.
+         * On button click, retrieves locker availability details from the database and displays the customer booking form.
          */
         bookingButton.addActionListener(new ActionListener()  {
         // Code to handle admin actions
@@ -1054,7 +1055,7 @@ public class GUI {
                 lastName.setText("");
                 email.setText("");
                // numAdults.setText("");
-                //numChildren.setText("");
+               // numChildren.setText("");
                 checkInDate.setDate(null);
                 checkOutDate.setDate(null);
                 roomType.setSelectedIndex(-1);
@@ -1099,14 +1100,14 @@ public class GUI {
                     throw new RuntimeException(ex);
                 }
                 try {
-                    String message = Hotel.reserveRoom(G, roomType1String, checkIn1String, checkOut1String, email1String, bill);
+                    String message = MainLocker.reserveRoom(G, roomType1String, checkIn1String, checkOut1String, email1String, bill);
                     if (message == null){
-                        JOptionPane.showMessageDialog(frame, "Sorry, room not available!");
+                        JOptionPane.showMessageDialog(frame, "Sorry, locker not available!");
                         customerViewFrame.add(customerPanel);
                         customerViewFrame.setVisible(true);
                     }
                     else if (message != null){
-                        Hotel.reserveRoom1(G, roomType1String, checkIn1String, checkOut1String, email1String);
+                        MainLocker.reserveRoom1(G, roomType1String, checkIn1String, checkOut1String, email1String);
                         JOptionPane.showMessageDialog(frame, message);
                         customerViewFrame.add(customerPanel);
                         customerViewFrame.setVisible(true);
@@ -1166,17 +1167,17 @@ public class GUI {
 
           /**
          * Initializes and attaches an action listener to the cancelReservationButton.
-         * This action listener prompts the user to input their room number and attempts to cancel their reservation.
+         * This action listener prompts the user to input their locker number and attempts to cancel their reservation.
          */
         cancelReservationButton.addActionListener(new ActionListener()  {
             // Code to handle admin actions
             public void actionPerformed(ActionEvent e){
-                // Prompt user for room number
+                // Prompt user for locker number
               String roomNum = JOptionPane.showInputDialog(frame,"Enter You're Locker Number Please"); 
 
-              // Validate the entered room number
+              // Validate the entered locker number
               if (roomNum != null && !roomNum.trim().isEmpty()) { 
-                // Check if roomNum is not empty after trimming whitespace
+                // Check if lockerNum is not empty after trimming whitespace
                 try {
                     roomNumber = Integer.parseInt(roomNum);
                 } catch (NumberFormatException e1) {
@@ -1185,9 +1186,9 @@ public class GUI {
             } else {
                 JOptionPane.showMessageDialog(frame, "Please Enter A Locker Number");
             }
-             // Attempt to cancel room reservation using the room number and display the outcome to the user
+             // Attempt to cancel locker reservation using the locker number and display the outcome to the user
               try {
-                  String cancelMessage = Hotel.cancelRoom(roomNumber);
+                  String cancelMessage = MainLocker.cancelRoom(roomNumber);
                   JOptionPane.showMessageDialog(frame, cancelMessage);
                 } catch (ClassNotFoundException e1) {
                     // TODO Auto-generated catch block

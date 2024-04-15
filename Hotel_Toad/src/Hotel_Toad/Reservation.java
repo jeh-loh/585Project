@@ -1,7 +1,7 @@
 package Hotel_Toad;
 
 /**
- * Represents a hotel reservation with details about the guests, stay duration, and room type.
+ * Represents a Storage System reservation with details about the guests, stay duration, and locker type.
  * @author Toad's Taskforce
  * @version 1.0
  * <p>
@@ -9,8 +9,8 @@ package Hotel_Toad;
  * </p>
  *
  * <p>
- * This class captures the essential details required to make a reservation in a hotel,
- * including the number of guests, dates of stay, preferred room type, and any additional message or request.
+ * This class captures the essential details required to make a reservation in a Storage System,
+ * including the number of guests, dates of stay, preferred locker type, and any additional message or request.
  * </p>
  */
 public class Reservation {
@@ -23,20 +23,20 @@ public class Reservation {
     public String checkIn;
     /** The check-out date for the reservation in a string format. */
     public String checkOut;
-    /** The type of the room for the reservation, e.g., "single", "double", "suite". */
+    /** The type of the locker for the reservation, e.g., "single", "double", "suite". */
     public String roomType;
     /** Any additional message or note related to the reservation. */
     public String message;
 
 
     /**
-     * Constructs a new Hotel_Toad.Reservation with the specified details.
+     * Constructs a new Storage System.Reservation with the specified details.
      *
      * @param numAdults    the number of adults.
      * @param numChildren  the number of children.
      * @param checkIn      the check-in date.
      * @param checkOut     the check-out date.
-     * @param roomType     the room type.
+     * @param roomType     the locker type.
      * @param message      any additional message or note.
      */
     public Reservation(int numAdults, int numChildren, String checkIn, String checkOut, String roomType,String message){
@@ -85,9 +85,9 @@ public class Reservation {
     }
 
     /**
-     * Returns the type of the room for the reservation.
+     * Returns the type of the locker for the reservation.
      *
-     * @return the room type.
+     * @return the locker type.
      */
     public String getRoomType(){
         return roomType;

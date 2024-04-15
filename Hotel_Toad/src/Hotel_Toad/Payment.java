@@ -18,7 +18,7 @@ import java.util.concurrent.TimeUnit;
  *
  * <p>
  * This class leverages the details of a reservation to compute the total cost for a guest's stay,
- * taking into account factors like room type, number of guests, and the duration of the stay.
+ * taking into account factors like locker type, number of guests, and the duration of the stay.
  * </p>
  */
 public class Payment {
@@ -32,7 +32,7 @@ public class Payment {
      */
     public String calculateBill(Reservation reservation) throws ParseException {
 
-        // Determine room price based on room type
+        // Determine locker price based on locker type
         double bill, roomPrice = 0;
         if (reservation.roomType.equalsIgnoreCase("Single")){
             roomPrice = 100.00;
@@ -61,7 +61,7 @@ public class Payment {
 
         // Calculate total bill
         bill = costPerNight * stayLength;
-       return "\nLocker Price: "+ fmt.format(bill);
+        return "\nLocker Price: "+ fmt.format(bill);
     }
 }
 

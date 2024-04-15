@@ -5,7 +5,7 @@ import javax.swing.table.DefaultTableModel;
 import java.sql.*;
 
 /**
- * Provides utilities for interacting with the hotel reservation database.
+ * Provides utilities for interacting with the locker database.
  * @author Toad's Taskforce
  * @version 1.0
  * <p>
@@ -63,7 +63,7 @@ public class Database {
      * @param firstName The first name of the customer.
      * @param lastName The last name of the customer.
      * @param email The email of the customer.
-     * @param number The room number of the customer.
+     * @param number The locker number of the customer.
      * @throws ClassNotFoundException if the database driver is not found.
      * @throws SQLException if there's any database access error.
      */
@@ -97,9 +97,9 @@ public class Database {
     }
 
     /**
-     * Deletes customer details associated with the provided room number.
+     * Deletes customer details associated with the provided locker number.
      *
-     * @param roomNum The room number of the customer to be deleted.
+     * @param lockerNum The locker number of the customer to be deleted.
      * @throws ClassNotFoundException if the database driver is not found.
      * @throws SQLException if there's any database access error.
      */
@@ -121,9 +121,9 @@ public class Database {
     }
 
     /**
-     * Retrieves room availability from the database and constructs a table model with this data.
+     * Retrieves locker availability from the database and constructs a table model with this data.
      *
-     * @return the constructed table model with room availability details.
+     * @return the constructed table model with locker availability details.
      * @throws ClassNotFoundException if the database driver is not found.
      * @throws SQLException if there's any database access error.
      */
@@ -164,9 +164,9 @@ public class Database {
         }
 
     /**
-     * Updates room availability in the database to 'Not Available' for the specified room number.
+     * Updates locker availability in the database to 'Not Available' for the specified locker number.
      *
-     * @param number The room number to be updated.
+     * @param number The locker number to be updated.
      * @throws ClassNotFoundException if the database driver is not found.
      * @throws SQLException if there's any database access error.
      */
@@ -191,9 +191,9 @@ public class Database {
     }
 
     /**
-     * Updates room availability in the database to 'Available' for the specified room number.
+     * Updates locker availability in the database to 'Available' for the specified locker number.
      *
-     * @param roomNum The room number to be updated.
+     * @param lockerNum The locker number to be updated.
      * @throws ClassNotFoundException if the database driver is not found.
      * @throws SQLException if there's any database access error.
      */
@@ -262,7 +262,7 @@ public class Database {
     /**
      * Adds a booking in the database with the provided details.
      *
-     * @param number The room number associated with the booking.
+     * @param number The locker number associated with the booking.
      * @param startDate The start date of the booking.
      * @param endDate The end date of the booking.
      * @throws ClassNotFoundException if the database driver is not found.
@@ -291,9 +291,9 @@ public class Database {
     }
 
     /**
-     * Deletes booking details associated with the provided room number.
+     * Deletes booking details associated with the provided locker number.
      *
-     * @param roomNum The room number of the booking to be deleted.
+     * @param lockerNum The locker number of the booking to be deleted.
      * @throws ClassNotFoundException if the database driver is not found.
      * @throws SQLException if there's any database access error.
      */
